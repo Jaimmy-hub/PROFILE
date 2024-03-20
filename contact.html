@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Perosnal Portfolio</title>
+        <!--favicon-->
+        <link rel="icon" type="image/x-icon" href="photo/favicon.ico"/>
+        <link rel="stylesheet" href="style.css">
+        <!--ICONIC KITS-->
+        <script src="https://kit.fontawesome.com/7d2f94e093.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="photo/rubiks-cube-gif.gif" class="logo">
+                    <ul id="menu">
+                        <li> <a href="home.html">Home</a></li>
+                        <li> <a href="resume.html">Resume</a></li>
+                        <li> <a href="project.html">Project</a></li>
+                        <li> <a href="contact.html">Contact</a></li>
+                        <i class="fas fa-x" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fas fa-bars" onclick="openmenu()"></i>
+                </nav>
+                <div id="contact">
+                    <div class="container">
+                        <div class="row">
+                            <div class="contact-left">
+                                <h1 class="sub-title">Contact Me</h1>
+                                <p><i class="fa-solid fa-paper-plane"></i>jimjimlozada22@gmail.com</p>
+                                <p><i class="fa-solid fa-phone-volume"></i>09475247459</p>
+                                <div class="social-icons">
+                                    <a href="https://www.facebook.com/Migraine.koyamojim"><i class="fab fa-facebook"></i></a>
+                                    <a href="https://m.me/Migraine.koyamojim"><i class="fab fa-facebook-messenger"></i></a>
+                                    <a href="https://www.instagram.com/coldflakesjim/"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="contact-right"></div>
+                            <form name="submit-to-google-sheet">
+                                <input type="text" name="Name" placeholder="Your Name" required>
+                                <input type="email" name="Email" placeholder="Your Email" required>
+                                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                                <a><button type="submit" class="btn btn2">Submit</button></a>
+                            </form>
+                            <span id="msg"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright"
+            <p>Copyright © Jaimmy.</p>
+            </div>
+        </div>
+        <script>
+            var sidemenu = document.getElementById("menu");
+            function openmenu(){
+                sidemenu.style.right= "0" ;
+            }
+            function closemenu(){
+                sidemenu.style.right= "-200px" ;
+            }
+        </script> 
+                  <script>
+                    const scriptURL = 'https://script.google.com/macros/s/AKfycbyJPZeRJbIkRGeG6GEFiwINt7pKTKnunkfv5TSFQjJ4AQQk5-FIMoEDVUNNqxkOwjZ1/exec'
+                    const form = document.forms['submit-to-google-sheet']
+                    const msg = document.getElementById("msg")
+                  
+                    form.addEventListener('submit', e => {
+                      e.preventDefault()
+                      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                        .then(response => {
+                            msg.innerHTML = "Message sent successfully"
+                            setTimeout(function(){
+                                msg.innerHTML = ""
+
+                            },5000)
+                            form.reset()
+                        })
+                        .catch(error => console.error('Error!', error.message))
+                    })
+                  </script>
+    </body>
+    </html>

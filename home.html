@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Perosnal Portfolio</title>
+        <!--favicon-->
+        <link rel="icon" type="image/x-icon" href="photo/favicon.ico"/>
+        <!--ICONIC KITS-->
+        <script src="https://kit.fontawesome.com/7d2f94e093.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!---------------------------HOME--------------------------------------->
+        <div id="header1">
+            <div class="container">
+                <nav>
+                    <img src="" class="logo">
+                    <ul id="menu">
+                        <li> <a href="home.html">Home</a></li>
+                        <li> <a href="resume.html">Resume</a></li>
+                        <li> <a href="project.html">Project</a></li>
+                        <li> <a href="contact.html">Contact</a></li>
+                        <i class="fas fa-x" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fas fa-bars" onclick="openmenu()"></i>
+                </nav>
+                <div class="header-text">
+                    <p>College Student (For now)</p>
+                    <h1> Hi, I'm <span>Jaimmy Lozada</span><br> From Quezon City </h1>
+                </div>
+            </div>
+        </div>
+        <script>
+            var sidemenu = document.getElementById("menu");
+            function openmenu(){
+                sidemenu.style.right= "0" ;
+            }
+            function closemenu(){
+                sidemenu.style.right= "-200px" ;
+            }
+        </script>
+    </body>
+</html>

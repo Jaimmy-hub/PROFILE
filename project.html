@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Perosnal Portfolio</title>
+        <!--favicon-->
+        <link rel="icon" type="image/x-icon" href="photo/favicon.ico"/>
+        <link rel="stylesheet" href="style.css">
+        <!--ICONIC KITS-->
+        <script src="https://kit.fontawesome.com/7d2f94e093.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="photo/rubiks-cube-gif.gif" class="logo">
+                    <ul id="menu">
+                        <li> <a href="home.html">Home</a></li>
+                        <li> <a href="resume.html">Resume</a></li>
+                        <li> <a href="project.html">Project</a></li>
+                        <li> <a href="contact.html">Contact</a></li>
+                        <i class="fas fa-x" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fas fa-bars" onclick="openmenu()"></i>
+                </nav>
+            <div id="project">
+                <div class="container">
+                    <h1 class="sub-title">My Project</h1>
+                    <div class="project-list">
+                        <div>
+                            <i class="fa-solid fa-book-open"></i>
+                            <h2>TO BE ANOUNCE</h2>
+                            <p> Description</p>
+                            <!--PROJECT DETAILS TO BE ADD-->
+                            <a href="#">Learn more</a>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-mountain-sun"></i>
+                            <h2>TO BE ANOUNCE</h2>
+                            <p> Description</p>
+                            <!--PROJECT DETAILS TO BE ADD-->
+                            <a href="#">Learn more</a>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-tree"></i>
+                            <h2>TO BE ANOUNCE</h2>
+                            <p> Description</p>
+                            <!--PROJECT DETAILS TO BE ADD-->
+                            <a href="#">Learn more</a>
+                        </div>
+
+<!--My Hobbies Work-->
+                            
+                </div>
+            </div>
+        </div>
+        <script>
+            var sidemenu = document.getElementById("menu");
+            function openmenu(){
+                sidemenu.style.right= "0" ;
+            }
+            function closemenu(){
+                sidemenu.style.right= "-200px" ;
+            }
+        </script>
+    </body>
+    </html>

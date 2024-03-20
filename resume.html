@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Perosnal Portfolio</title>
+        <!--favicon-->
+        <link rel="icon" type="image/x-icon" href="photo/favicon.ico"/>
+        <!--ICONIC KITS-->
+        <script src="https://kit.fontawesome.com/7d2f94e093.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="photo/rubiks-cube-gif.gif" class="logo">
+                    <ul id="menu">
+                        <li> <a href="home.html">Home</a></li>
+                        <li> <a href="resume.html">Resume</a></li>
+                        <li> <a href="project.html">Project</a></li>
+                        <li> <a href="contact.html">Contact</a></li>
+                        <i class="fas fa-x" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fas fa-bars" onclick="openmenu()"></i>
+                </nav>
+                <div id="resume">
+                    <div class="container">
+                        <div class="row">
+                            <div class="resume-col-1">
+                                <img src="photo/profile.png">
+                            </div>
+                            <div class="resume-col-2">
+                                <h1 class="sub-title"> About Me</h1>
+                                <p>Seeking a challenging career with a progressive organization that provides an oppurtunity to capitalized my technical skills and abilities in the field of Information Technologies (IT)</p>
+                                <div class="tab-titles">
+                                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                                </div>
+                                <div class="tab-contents active-tab" id="skills">
+                                    <ul>
+                                        <li><span>Technical</span><br>Hardware troubleshooting/Network troubleshooting</li>
+                                        <li><span>Programming Language </span>
+                                            <br>Java/Javascripts
+                                        </li>
+                                        <li><span>Microsoft Office </span>
+                                            <br>Word,Excell,Powerpoint
+                                        </li>
+                                        <li><Span>Personal</Span>
+                                            <br>Excellent written and verbal communication skills,
+                                            Highly organized and efficient,
+                                            Ability to work independently or as part of a team and underpressure,
+                                            Problem leadership skils and ability to motivate
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="tab-contents" id="experience">
+                                    <ul>
+                                        <li><span>2022 - Current </span>
+                                            <br>BPO Industries
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="tab-contents" id="education">
+                                    <ul>
+                                        <li><span>2021 - ? </span>
+                                            <br>BS Information Technology
+                                        </li>
+                                        <li><span>2019 - 2021 </span>
+                                            <br>Senior High School
+                                        </li>
+                                        <li><span>2015 - 2019</span>
+                                            <br>Junior High School
+                                        </li>
+                                        <li><Span>2009 - 2015</Span>
+                                            <br>Elementary School
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+            </script>
+            <script>
+                var sidemenu = document.getElementById("menu");
+                function openmenu(){
+                    sidemenu.style.right= "0" ;
+                }
+                function closemenu(){
+                    sidemenu.style.right= "-200px" ;
+                }
+            </script>
+    </body>
+    </html>
